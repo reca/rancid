@@ -57,8 +57,8 @@ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(srcdir)/mrancid.in $(srcdir)/mrvlogin.in \
 	$(srcdir)/mrvrancid.in $(srcdir)/nlogin.in \
 	$(srcdir)/nrancid.in $(srcdir)/nslogin.in \
-	$(srcdir)/nsrancid.in $(srcdir)/nxrancid.in $(srcdir)/par.in \
-	$(srcdir)/prancid.in $(srcdir)/rancid-fe.in \
+	$(srcdir)/nsrancid.in $(srcdir)/nxrancid.in $(srcdir)/nxvdcrancid.in \
+    $(srcdir)/par.in $(srcdir)/prancid.in $(srcdir)/rancid-fe.in \
 	$(srcdir)/rancid.in $(srcdir)/rivlogin.in \
 	$(srcdir)/rivrancid.in $(srcdir)/rrancid.in \
 	$(srcdir)/srancid.in $(srcdir)/tlogin.in $(srcdir)/tntlogin.in \
@@ -77,7 +77,7 @@ CONFIG_CLEAN_FILES = control_rancid par rancid-fe agmrancid alogin \
 	clogin rancid cssrancid elogin erancid f5rancid f10rancid \
 	flogin francid fnlogin fnrancid hlogin hrancid htlogin \
 	htrancid jlogin jrancid jerancid mrancid mrvlogin mrvrancid \
-	nlogin nrancid nslogin nsrancid nxrancid prancid rivlogin \
+	nlogin nrancid nslogin nsrancid nxrancid nxvdcrancid prancid rivlogin \
 	rivrancid rrancid srancid tlogin tntlogin tntrancid trancid \
 	xrancid xrrancid zrancid
 CONFIG_CLEAN_VPATH_FILES =
@@ -249,7 +249,7 @@ bin_SCRIPTS = agmrancid alogin arancid arrancid avologin avorancid \
 	elogin erancid f5rancid f10rancid flogin fnlogin fnrancid \
 	francid hlogin hrancid htlogin htrancid jerancid jlogin \
 	jrancid mrancid mrvlogin mrvrancid nlogin nrancid nslogin \
-	nsrancid nxrancid par prancid rancid-fe rancid rivlogin \
+	nsrancid nxrancid nxvdcrancid par prancid rancid-fe rancid rivlogin \
 	rivrancid rrancid srancid tlogin tntlogin tntrancid trancid \
 	xrancid xrrancid zrancid lg.cgi lgform.cgi rancid-cvs \
 	rancid-run
@@ -396,6 +396,8 @@ nslogin: $(top_builddir)/config.status $(srcdir)/nslogin.in
 nsrancid: $(top_builddir)/config.status $(srcdir)/nsrancid.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 nxrancid: $(top_builddir)/config.status $(srcdir)/nxrancid.in
+	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+nxvdcrancid: $(top_builddir)/config.status $(srcdir)/nxvdcrancid.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 prancid: $(top_builddir)/config.status $(srcdir)/prancid.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
