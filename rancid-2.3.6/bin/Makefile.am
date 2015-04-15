@@ -39,9 +39,9 @@
 ## CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ## ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 ## POSSIBILITY OF SUCH DAMAGE.
-# 
+#
 #  The expect login scripts were based on Erik Sherk's gwtn, by permission.
-# 
+#
 #  The original looking glass software was written by Ed Kern, provided by
 #  permission and modified beyond recognition.
 
@@ -53,8 +53,8 @@ bin_SCRIPTS = agmrancid alogin arancid arrancid avologin avorancid blogin \
 	brancid cat5rancid clogin control_rancid cssrancid elogin erancid \
 	f5rancid f10rancid flogin fnlogin fnrancid francid hlogin hrancid \
 	htlogin htrancid jerancid jlogin jrancid mrancid mrvlogin mrvrancid \
-	nlogin nrancid nslogin nsrancid nxrancid nxvdcrancid par prancid rancid-fe \ 
-    rancid rivlogin rivrancid rrancid srancid tlogin tntlogin tntrancid trancid \
+	nlogin nrancid nslogin nsrancid nxrancid nxsprancid nxvdcrancid par prancid \
+	rancid-fe rancid rivlogin rivrancid rrancid srancid tlogin tntlogin tntrancid trancid \
 	xrancid xrrancid zrancid
 
 bin_SCRIPTS += lg.cgi lgform.cgi rancid-cvs rancid-run

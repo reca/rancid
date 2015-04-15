@@ -1,3 +1,7 @@
+2.3.6reca1
+	nxsprancid: add support for switch-profile on cisco Nexus boxes;
+    use type cisco-nx-sp
+
 2.3.6reca
 	nxvdcrancid: add support for Non-admin-VDCs on cisco Nexus boxes;
     use type cisco-nx-vdc
@@ -229,7 +233,7 @@
 
 	rancid: filter filesize and date of tracelogs dir on IOS-XE
 
-	rancid: summarize bytes free for IOS-XE like XR 
+	rancid: summarize bytes free for IOS-XE like XR
 
 	nsrancid/nslogin: updates for netscalar version 8 - Marco Schirrmeister
 

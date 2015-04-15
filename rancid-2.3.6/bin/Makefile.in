@@ -15,9 +15,9 @@
 
 @SET_MAKE@
 
-# 
+#
 #  The expect login scripts were based on Erik Sherk's gwtn, by permission.
-# 
+#
 #  The original looking glass software was written by Ed Kern, provided by
 #  permission and modified beyond recognition.
 
@@ -58,7 +58,8 @@ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(srcdir)/mrvrancid.in $(srcdir)/nlogin.in \
 	$(srcdir)/nrancid.in $(srcdir)/nslogin.in \
 	$(srcdir)/nsrancid.in $(srcdir)/nxrancid.in $(srcdir)/nxvdcrancid.in \
-    $(srcdir)/par.in $(srcdir)/prancid.in $(srcdir)/rancid-fe.in \
+	$(srcdir)/nxsprancid.in \
+	$(srcdir)/par.in $(srcdir)/prancid.in $(srcdir)/rancid-fe.in \
 	$(srcdir)/rancid.in $(srcdir)/rivlogin.in \
 	$(srcdir)/rivrancid.in $(srcdir)/rrancid.in \
 	$(srcdir)/srancid.in $(srcdir)/tlogin.in $(srcdir)/tntlogin.in \
@@ -78,6 +79,7 @@ CONFIG_CLEAN_FILES = control_rancid par rancid-fe agmrancid alogin \
 	flogin francid fnlogin fnrancid hlogin hrancid htlogin \
 	htrancid jlogin jrancid jerancid mrancid mrvlogin mrvrancid \
 	nlogin nrancid nslogin nsrancid nxrancid nxvdcrancid prancid rivlogin \
+	nxsprancid \
 	rivrancid rrancid srancid tlogin tntlogin tntrancid trancid \
 	xrancid xrrancid zrancid
 CONFIG_CLEAN_VPATH_FILES =
@@ -250,6 +252,7 @@ bin_SCRIPTS = agmrancid alogin arancid arrancid avologin avorancid \
 	francid hlogin hrancid htlogin htrancid jerancid jlogin \
 	jrancid mrancid mrvlogin mrvrancid nlogin nrancid nslogin \
 	nsrancid nxrancid nxvdcrancid par prancid rancid-fe rancid rivlogin \
+	nxsprancid \
 	rivrancid rrancid srancid tlogin tntlogin tntrancid trancid \
 	xrancid xrrancid zrancid lg.cgi lgform.cgi rancid-cvs \
 	rancid-run
@@ -397,6 +400,8 @@ nsrancid: $(top_builddir)/config.status $(srcdir)/nsrancid.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 nxrancid: $(top_builddir)/config.status $(srcdir)/nxrancid.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+nxsprancid: $(top_builddir)/config.status $(srcdir)/nxsprancid.in
+	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 nxvdcrancid: $(top_builddir)/config.status $(srcdir)/nxvdcrancid.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 prancid: $(top_builddir)/config.status $(srcdir)/prancid.in
@@ -460,7 +465,7 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-hpuifilter$(EXEEXT): $(hpuifilter_OBJECTS) $(hpuifilter_DEPENDENCIES) 
+hpuifilter$(EXEEXT): $(hpuifilter_OBJECTS) $(hpuifilter_DEPENDENCIES)
 	@rm -f hpuifilter$(EXEEXT)
 	$(LINK) $(hpuifilter_OBJECTS) $(hpuifilter_LDADD) $(LIBS)
 install-binSCRIPTS: $(bin_SCRIPTS)
